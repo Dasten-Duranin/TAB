@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='fr'>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<link rel="stylesheet" media="all" type"text/css" href="css/style-story.css"/>
+		<link rel="stylesheet" media="all" type"text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/class.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jInvertScroll/dist/js/jquery.jInvertScroll.js"></script>
+    <link rel="stylesheet" media="all" type"text/css" href="js/jInvertScroll/dist/css/jInvertScroll.css"/>
+	</head>
+  <style>
+  body {
+    position: fixed;	// All scrollable elements have to be position:fixed
+bottom: 0;	// Make it stick to the bottom (or top)
+width: 1080px;	// I recommend to assign the width in px, prevents preloading issues
+  }
+  </style>
+	<body>
+    <div style="width:10%; margin-top:40%;">
+      <div class="tuna"></div>
+    </div>
+  </body>
+  <script>
+  $(document).ready(function() {
+    $.jInvertScroll(['body']);
+    $.jInvertScroll(['body'], {
+	width: 'auto',	// Page width (auto or int value)
+	height: 'auto',	// Page height (the shorter, the faster the scroll)
+	onScroll: function(percent) {
+		// Callback function that will be called each time the user
+		// scrolls up or down, useful for animating other parts
+		// on the page depending on how far the user has scrolled down
+		// values go from 0.0 to 1.0 (with 4 decimals precision)
+	}
+});
+  });
+  </script>
+
+  </html>
