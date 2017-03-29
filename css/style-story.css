@@ -1,13 +1,13 @@
 body{
   width : 1080px;
-  background: url(fond.jpg) no-repeat;
-  background-size: 100%;
+  background: url(fond-min.png) no-repeat;
+  background-size: auto 100%;
   position: relative;
 }
 
 .tuna {
 /* steps causes the animation to chunk into 12 equal pieces */
-animation: walk-cycle 3s steps(8) infinite;
+animation: walk-cycle 2s steps(8) infinite;
 background: url(runners2.png) 0 0 no-repeat;
 height: 305px;
 width: 400px;
