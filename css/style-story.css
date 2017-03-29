@@ -1,0 +1,21 @@
+body{
+  width : 1080px;
+  background: url(fond.jpg) no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.tuna {
+/* steps causes the animation to chunk into 12 equal pieces */
+animation: walk-cycle 3s steps(8) infinite;
+background: url(runners2.png) 0 0 no-repeat;
+height: 305px;
+width: 400px;
+//margin: 100px auto 0;
+}
+
+
+@keyframes walk-cycle {
+  0% {background-position: 0 0; }
+  100% {background-position: 0 -2391px; } /* Must be full height of sprite or skipping will happen.*/
+}

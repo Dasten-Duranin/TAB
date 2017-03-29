@@ -1,1 +1,29 @@
+@font-face {
+    font-family: 'kenyan_bold';
+    src: url(kenyan_coffee_bd.ttf);
+}
 
+@font-face {
+    font-family: 'kenyan_rg';
+    src: url(kenyan_coffee_rg.ttf);
+}
+
+@font-face {
+    font-family: 'kenyan_it';
+    src: url(kenyan_coffee_it.ttf);
+}
+
+
+body{
+  background: url(image-depart.jpg) no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+h1{
+  font-family: 'kenyan_rg';
+  text-align: center;
+  color : white;
+  font-size: 70px;
+  margin-top: 7%;
+}
