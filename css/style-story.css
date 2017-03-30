@@ -38,6 +38,26 @@ width: 400px;
     font-size: 14pt;
 }
 
+.modal-content {
+  background-color:#EE8035;
+}
+
+.modal-title {
+  color:white;
+}
+
+h4 {
+  color:white;
+}
+
+h5 {
+  color:white;
+}
+
+p {
+  color:white;
+}
+
 .moving {
   position: absolute;
   animation-name: run;
