@@ -62,7 +62,7 @@ LightBox.prototype = {
 		modalDocument.append(this.container);
 
 		//set header
-		this.header = $('<div class="modal-header"><h3>'+this.contents.title+'</h3><p>Motive Caroline par :</p><button type="button" class="btn btn-default btn-sm cultural tab">Informations Culturelles</button><button type="button" class="btn btn-default btn-sm facts tab">Informations Ludique</button></div>');
+		this.header = $('<div class="modal-header"><h3>'+this.contents.title+'</h3><p>Motive Caroline par :</p><button type="button" class="btn btn-default btn-sm cultural tab">Informations Culturelles</button><button type="button" class="btn btn-default btn-sm facts tab">Informations Ludiques</button></div>');
 		this.container.append(this.header);
 
 		//set body 
