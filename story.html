@@ -3,18 +3,62 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title></title>
+		<link rel="stylesheet" media="all" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 		<link rel="stylesheet" media="all" type"text/css" href="css/style-story.css"/>
-		<link rel="stylesheet" media="all" type"text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css"/>
+		<link rel="stylesheet" media="all" type"text/css" href="css/lightBoxes.css"/>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/class.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-    <div style="width:10%; margin-top:40%;">
+		<button type="button" id="run">RUN</button>
+		<div id="nuage"></div>
+    <div id="caroRun" style="left:20px;bottom:9%;position:absolute;">
       <div class="tuna"></div>
     </div>
+		<div id="infoCaro" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content" style="background-color:white;">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h3 class="modal-title text-center">Bienvenue à Caroline !</h3>
+	      </div>
+	      <div class="modal-body">
+					<h4>
+						Mais au fait, qui est Caroline ?
+					</h4>
+	        <p class='text-justify'>
+						Qui est Caroline ?
+						<br>
+						Cette jeune femme de 32 ans habite en périphérie d’Angers. Son manque de confiance en elle l’empêche de vivre pleinement, ses doutes l’empêchent de dormir. Elle s’est donc donnée pour défi de finir ce trail. À travers cette course, elle veut se prouver qu’elle est capable d’aller au bout de quelque chose et qu’elle peut y arriver, même si elle ne court pas régulièrement. Elle s’est donné pour objectif de terminer la course en moins d’une heure, ce qui équivaut à une moyenne de 10,5km/h environ.
+						Tu comprends maintenant l’enjeu et l’importance de ce trail pour Caroline ?
+						C’est là que tu interviens. Tu dois tout faire pour qu’elle n’abandonne pas. Tu auras différentes options pour la divertir, on compte sur toi !
+					</p>
+					<p class="alert-info text-center">Pour revoir ces informations à tout moment, il vous suffira de cliquer sur Caroline !</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fermer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
   </body>
+  <script>
+  $(document).ready(function() {
+		$('#infoCaro').modal('show');
+		$('#caroRun').on('click', function() {
+			$('#infoCaro').modal('show');
+		});
+    $('#run').on('click', function() {
+    $("body").animate({
+      "backgroundPositionX": "+=22%"
+    }, 10000);
+		$("#nuage").animate({
+      "backgroundPositionX": "+=25%"
+    }, 7000);
+  });
+  });
+  </script>
 
   </html>

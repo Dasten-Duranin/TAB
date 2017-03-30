@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'kenyan_bold';
+    src: url(../fonts/kenyan_coffee_bd.ttf);
+}
+
+@font-face {
+    font-family: 'kenyan_rg';
+    src: url(../fonts/kenyan_coffee_rg.ttf);
+}
+
+@font-face {
+    font-family: 'kenyan_it';
+    src: url(../fonts/kenyan_coffee_it.ttf);
+}
+
+h3{
+ font-family: 'kenyan_rg';
+ text-align: center;
+ color : white;
+ font-size: 50px;
+}

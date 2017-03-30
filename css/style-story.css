@@ -1,15 +1,29 @@
 body{
-  width : 1080px;
-  background: url(fond-min.png) no-repeat;
-  background-size: auto 100%;
-  position: relative;
+  background: url(../img/background.svg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #CBF1F4;
+}
+
+#nuage {
+  background: url(../img/nuage.svg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-position: left center;
 }
 
 .tuna {
 /* steps causes the animation to chunk into 12 equal pieces */
-animation: walk-cycle 2s steps(8) infinite;
-background: url(runners2.png) 0 0 no-repeat;
-height: 305px;
+animation: walk-cycle 0.6s steps(4) infinite;
+background: url(../img/perso-runner.png) 0 0 no-repeat;
+height: 215px;
 width: 400px;
 //margin: 100px auto 0;
 }
@@ -17,5 +31,5 @@ width: 400px;
 
 @keyframes walk-cycle {
   0% {background-position: 0 0; }
-  100% {background-position: 0 -2391px; } /* Must be full height of sprite or skipping will happen.*/
+  100% {background-position: 0 -951px; } /* Must be full height of sprite or skipping will happen.*/
 }

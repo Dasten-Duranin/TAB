@@ -3,16 +3,19 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title></title>
-		<link rel="stylesheet" media="all" type"text/css" href="css/style.css"/>
 		<link rel="stylesheet" media="all" type"text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css"/>
+		<link rel="stylesheet" media="all" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<link rel="stylesheet" media="all" type"text/css" href="css/lightBoxes.css"/>
+		<link rel="stylesheet" media="all" type"text/css" href="css/style.css"/>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/class.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-			<h1>A VOS MARQUES, </br> PRET ?</br> PARTEZ !</h1>
-			<div class="clock" style="margin-left: 40%;"></div>
+
+			<div class="clock" style="margin-left: 40%; position: absolute; width: 30%; bottom : 0; margin-bottom: 15%;"></div>
 
 
 		<script type="text/javascript">
@@ -28,6 +31,11 @@
 
 			        }
 			    });
+
+					setTimeout(function() {
+						window.location = 'story.html';
+					}, 12000);
+
 			});
 		</script>
 

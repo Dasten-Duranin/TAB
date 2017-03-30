@@ -1,0 +1,42 @@
+#lightBoxes .overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+#lightBoxes .overlay .container {
+	transform: translateY(-50%);
+	margin: 0 auto;
+	margin-top: 50vh;
+	max-width: 800px;
+	max-height: 500px;
+	background-color: #FFF;
+	box-shadow: 0px 0px 49px 54px rgba(255,255,255,1);
+}
+#lightBoxes .overlay .container .custom {
+	text-align:right;
+	margin: 25px;
+}
+#lightBoxes .overlay .container .custom span:hover {
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+#lightBoxes .overlay .container .header {
+	text-align: center;
+	margin: 25px;
+	font-size: 18px;
+}
+#lightBoxes .overlay .container .header .separator {
+	margin: 0 5px;
+	border-left: 1px solid black;
+}
+#lightBoxes .overlay .container .header .selected,
+#lightBoxes .overlay .container .header span:hover {
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+
