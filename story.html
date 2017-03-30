@@ -2,7 +2,7 @@
 <html lang='fr'>
 	<head>
 		<meta charset="utf-8"/>
-		<title></title>
+		<title>Tout Angers Bouge</title>
 		<link rel="stylesheet" media="all" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 		<link rel="stylesheet" media="all" type"text/css" href="css/style-story.css"/>
 		<link rel="stylesheet" media="all" type"text/css" href="css/lightBoxes.css"/>
@@ -12,16 +12,20 @@
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<button type="button" id="run">RUN</button>
+		<a class="btn btn-secondary" style="background-color: #EE8035; color: white; z-index:300;" href="map.html" target="_blank">Carte</a>
+		<a class="btn btn-secondary" style="background-color: #EE8035; color: white; z-index:300;" href="credit.html" target="_blank">Crédits</a>
+	</div>
+		<button type="button" id="run" style="display:none;">RUN</button>
 		<div id="nuage"></div>
-    <div id="caroRun" style="left:20px;bottom:9%;position:absolute;">
-      <div class="tuna"></div>
-    </div>
+		<a href="#">
+	    <div id="caroRun" style="left:20px;bottom:9%;position:absolute;">
+	      <div class="tuna"></div>
+	    </div>
+		</a>
 		<div id="infoCaro" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg" role="document">
 	    <div class="modal-content" style="background-color:#EE8035;">
 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h3 style="color:white;" class="modal-title text-center">Bienvenue à Caroline !</h3>
 	      </div>
 	      <div class="modal-body">
@@ -52,7 +56,7 @@
 			$("#close").css('display', 'block');
 			$("body").animate({
 	      "backgroundPositionX": "+=5%"
-	    }, 10000);
+	    }, 12000);
 			$("#nuage").animate({
 	      "backgroundPositionX": "+=7%"
 	    }, 7000);
@@ -67,9 +71,9 @@
     $("body").animate({
       "backgroundPositionX": "+=18%"
     }, 10000, function() {
-			i++;
-			if(i === 5) {
-
+			count++;
+			if(count === 5) {
+				final();
 			}
 		});
 		$("#nuage").animate({
@@ -78,6 +82,15 @@
 
   });
 });
+
+function final() {
+	$("#caroRun").addClass('moving');
+	var audio = new Audio('audio/foule.mp3');
+	audio.play();
+	setTimeout(function() {
+		$("#caroRun").css('animation-play-state', 'paused');
+	}, 7000);
+}
   </script>
 
   </html>

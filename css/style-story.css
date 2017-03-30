@@ -21,7 +21,7 @@ body{
 
 .tuna {
 /* steps causes the animation to chunk into 12 equal pieces */
-animation: walk-cycle 0.6s steps(4) infinite;
+animation: walk-cycle 0.5s steps(4) infinite;
 background: url(../img/perso-runner.png) 0 0 no-repeat;
 height: 215px;
 width: 400px;
@@ -36,4 +36,24 @@ width: 400px;
 
 .modal-body {
     font-size: 14pt;
+}
+
+.moving {
+  position: absolute;
+  animation-name: run;
+  animation-iteration-count: 1;
+  animation-duration: 10s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+
+@keyframes run {
+  from {
+    left:  20px;
+  }
+  to {
+    left: 2400px;
+   }
 }
