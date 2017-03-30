@@ -19,26 +19,25 @@
     </div>
 		<div id="infoCaro" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg" role="document">
-	    <div class="modal-content" style="background-color:white;">
+	    <div class="modal-content" style="background-color:#EE8035;">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h3 class="modal-title text-center">Bienvenue à Caroline !</h3>
+	        <h3 style="color:white;" class="modal-title text-center">Bienvenue à Caroline !</h3>
 	      </div>
 	      <div class="modal-body">
-					<h4>
+					<h4 style="color:white;">
 						Mais au fait, qui est Caroline ?
 					</h4>
-	        <p class='text-justify'>
-						Qui est Caroline ?
-						<br>
+	        <p style="color:white;" class='text-justify'>
 						Cette jeune femme de 32 ans habite en périphérie d’Angers. Son manque de confiance en elle l’empêche de vivre pleinement, ses doutes l’empêchent de dormir. Elle s’est donc donnée pour défi de finir ce trail. À travers cette course, elle veut se prouver qu’elle est capable d’aller au bout de quelque chose et qu’elle peut y arriver, même si elle ne court pas régulièrement. Elle s’est donné pour objectif de terminer la course en moins d’une heure, ce qui équivaut à une moyenne de 10,5km/h environ.
 						Tu comprends maintenant l’enjeu et l’importance de ce trail pour Caroline ?
 						C’est là que tu interviens. Tu dois tout faire pour qu’elle n’abandonne pas. Tu auras différentes options pour la divertir, on compte sur toi !
 					</p>
-					<p class="alert-info text-center">Pour revoir ces informations à tout moment, il vous suffira de cliquer sur Caroline !</p>
+					<h5 style="color:white;" class="text-center">Pour revoir ces informations à tout moment, il te suffira de cliquer sur Caroline !</h5>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fermer</button>
+	        <button style="display:none;" id="close" type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fermer</button>
+					<button id="firstClose" type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fermer</button>
 	      </div>
 	    </div>
 	  </div>
@@ -46,19 +45,39 @@
   </body>
   <script>
   $(document).ready(function() {
+		var count = 0;
+
+		$('#firstClose').click(function() {
+			$(this).css('display', 'none');
+			$("#close").css('display', 'block');
+			$("body").animate({
+	      "backgroundPositionX": "+=5%"
+	    }, 10000);
+			$("#nuage").animate({
+	      "backgroundPositionX": "+=7%"
+	    }, 7000);
+		});
+
 		$('#infoCaro').modal('show');
 		$('#caroRun').on('click', function() {
 			$('#infoCaro').modal('show');
 		});
+
     $('#run').on('click', function() {
     $("body").animate({
-      "backgroundPositionX": "+=22%"
-    }, 10000);
+      "backgroundPositionX": "+=18%"
+    }, 10000, function() {
+			i++;
+			if(i === 5) {
+
+			}
+		});
 		$("#nuage").animate({
-      "backgroundPositionX": "+=25%"
+      "backgroundPositionX": "+=20%"
     }, 7000);
+
   });
-  });
+});
   </script>
 
   </html>

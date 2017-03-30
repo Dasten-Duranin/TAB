@@ -33,3 +33,7 @@ width: 400px;
   0% {background-position: 0 0; }
   100% {background-position: 0 -951px; } /* Must be full height of sprite or skipping will happen.*/
 }
+
+.modal-body {
+    font-size: 14pt;
+}
