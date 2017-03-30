@@ -1,27 +1,29 @@
 @font-face {
     font-family: 'kenyan_bold';
-    src: url(kenyan_coffee_bd.ttf);
+    src: url(../fonts/kenyan_coffee_bd.ttf);
 }
 
 @font-face {
     font-family: 'kenyan_rg';
-    src: url(kenyan_coffee_rg.ttf);
+    src: url(../fonts/kenyan_coffee_rg.ttf);
 }
 
 @font-face {
     font-family: 'kenyan_it';
-    src: url(kenyan_coffee_it.ttf);
+    src: url(../fonts/kenyan_coffee_it.ttf);
 }
 
 
 body{
-  background: url(image-depart.jpg) no-repeat;
-  background-size: 100%;
-  position: relative;
+  background: url(../img/fond-depart.jpg) no-repeat fixed;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: 100% 100%;
 }
 
 h1{
-  font-family: 'kenyan_rg';
+  font-family: 'kenyan_rg';git ad
   text-align: center;
   color : white;
   font-size: 70px;
