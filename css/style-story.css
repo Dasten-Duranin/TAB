@@ -58,6 +58,14 @@ p {
   color:white;
 }
 
+h3 {
+  color:white;
+}
+
+li {
+  color:white;
+}
+
 .moving {
   position: absolute;
   animation-name: run;

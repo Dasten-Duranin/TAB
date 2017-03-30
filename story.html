@@ -23,6 +23,25 @@
 	      <div class="tuna"></div>
 	    </div>
 		</a>
+		<div id="infoFinal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title text-center">Félicitations ! </h3>
+				</div>
+				<div class="modal-body">
+					<p class='text-justify'>
+					Tu as permis à Caroline de terminer la course en 56’37 mn, elle a donc atteint son objectif ! Grâce à toi, Caroline a repris confiance en elle et est désormais plus que déterminée à continuer sur cette lancée. Elle te remercie pour tes efforts. 
+					La prochaine fois, ce sera toi !
+							</p>
+				</div>
+				<div class="modal-footer">
+					<a onclick="location.reload();" class="btn btn-default btn-sm">Recommencer</a>
+					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Fermer</button>
+				</div>
+				</div>
+			</div>
+		</div>
 		<div id="infoCaro" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg" role="document">
 	    <div class="modal-content">
@@ -48,50 +67,5 @@
 	  </div>
 	</div>
   </body>
-  <script>
-  $(document).ready(function() {
-		var count = 0;
-
-		$('#firstClose').click(function() {
-			$(this).css('display', 'none');
-			$("#close").css('display', 'block');
-			$("body").animate({
-	      "backgroundPositionX": "+=5%"
-	    }, 12000);
-			$("#nuage").animate({
-	      "backgroundPositionX": "+=7%"
-	    }, 7000);
-		});
-
-		$('#infoCaro').modal('show');
-		$('#caroRun').on('click', function() {
-			$('#infoCaro').modal('show');
-		});
-
-    $('#run').on('click', function() {
-    $("body").animate({
-      "backgroundPositionX": "+=18%"
-    }, 10000, function() {
-			count++;
-			if(count === 5) {
-				final();
-			}
-		});
-		$("#nuage").animate({
-      "backgroundPositionX": "+=20%"
-    }, 7000);
-
-  });
-});
-
-function final() {
-	$("#caroRun").addClass('moving');
-	var audio = new Audio('audio/foule.mp3');
-	audio.play();
-	setTimeout(function() {
-		$("#caroRun").css('animation-play-state', 'paused');
-	}, 7000);
-}
-  </script>
 
   </html>

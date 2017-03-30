@@ -9,6 +9,8 @@ function LightBox(obj) {
 
 	this.container      = null;
 	this.header         = null;
+	this.body           = null;
+	this.footer         = null;
 	this.frame          = {};
 	this.frame.selected = 'facts';
 	this.contents       = null;
@@ -49,37 +51,45 @@ LightBox.prototype = {
 			otherBoxes.hide();
 		}
 
-		this.overlay = $('<div class="overlay" id="'+this.overlayId+'"></div>');
+		this.overlay = $('<div class="overlay modal fade" id="'+this.overlayId+'" tabindex="-1" role="dialog"></div>');
 		this.lightBoxesContainer.append(this.overlay);
 
+		var modalDocument = $('<div class="modal-dialog modal-lg" role="document"></div>');
+		this.overlay.append(modalDocument);
+
 		//Container of lightBox
-		this.container = $('<div class="container"></div>');
-		this.overlay.append(this.container);
+		this.container = $('<div class="modal-content"></div>');
+		modalDocument.append(this.container);
 
 		//set header
-		this.header = $('<div class="header"><span class="cultural tab">Informations Culturelles</span><span class="separator"></span><span class="facts tab selected">Informations Diverses</span></div>');
+		this.header = $('<div class="modal-header"><h3>'+this.contents.title+'</h3><p>Motive Caroline par :</p><button type="button" class="btn btn-default btn-sm cultural tab">Informations Culturelles</button><button type="button" class="btn btn-default btn-sm facts tab">Informations Ludique</button></div>');
 		this.container.append(this.header);
+
+		//set body 
+		this.body = $('<div class="modal-body">');
+		this.container.append(this.body);
 
 
 		//set Facts frame
 		this.frame.facts = $('<div></div>');
 		this.frame.facts.append($(this.contents.facts));
 
-		this.container.append($(this.frame.facts));
+		this.body.append($(this.frame.facts));
 
 		//set Cultural frame
 		this.frame.cultural = $('<div></div>');
 		this.frame.cultural.append($(this.contents.cultural));
 
-		this.container.append($(this.frame.cultural));
+		this.body.append($(this.frame.cultural));
 
-		this.selectContent(this.frame.selected);
+		this.frame.cultural.hide();
+		this.frame.facts.hide();
 
-		//set custom Content (button next step for us)
-		this.frame.custom = $('<div class="custom"></div>');
-		this.frame.custom.append($(this.contents.custom));
+		//set footer 
+		this.footer = $('<div class="modal-footer">');
+		this.footer.append($(this.contents.footer));
 
-		this.container.append($(this.frame.custom));
+		this.container.append(this.footer);
 
 		//handle click events on tabs
 		var object = this;
@@ -87,7 +97,7 @@ LightBox.prototype = {
 		$('.tab', this.header).click(function() {
 			var classes = $(this).attr('class').split(' ');
 			$.each(classes, function(index, value) {
-				if (value != 'tab' && value != 'selected') {
+				if (value != 'tab' && value != 'active'  && value != 'btn' && value != 'btn-default' && value != 'btn-sm') {
 					object.selectContent(value);
 				}
 			});
@@ -95,8 +105,9 @@ LightBox.prototype = {
     },
 	selectContent: function(content)
 	{
-		$('.tab', this.header).removeClass('selected');
-		$('.tab.'+content, this.header).addClass('selected');
+		console.log(content);
+		$('.tab', this.header).removeClass('active');
+		$('.tab.'+content, this.header).addClass('active');
 
 		this.frame.cultural.hide();
 		this.frame.facts.hide();
@@ -104,18 +115,11 @@ LightBox.prototype = {
 	},
 	show: function()
 	{
-		this.overlay.show();
-
-		//set the frames height
-		if (this.frame.facts.height() > this.frame.cultural.height()) {
-			this.frame.cultural.height(this.frame.facts.height());
-		} else {
-			this.frame.facts.height(this.frame.cultural.height());
-		}
+		this.overlay.modal('show');
 	},
 	hide: function()
 	{
-		this.overlay.hide();
+		this.overlay.modal('hide');
 	},
 };
 
