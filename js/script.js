@@ -84,7 +84,7 @@ function initLightBoxes ()
 						'<li>97 associations sportives</li>'+
 					'</ul>'+
 					'<p>N’oublie pas que cette course est aussi culturelle. Profites-en pour découvrir des nouvelles choses.</p>',
-			title: 'Tu es arrivée au musée des Beaux Arts',
+			title: '<img src="img/titre_musee.png" style="width:300px; height:auto;"/>',
 			footer: '<button type="button" class="btn btn-default btn-sm nextStep">Prochaine étape</button>',
 		},
 	});
@@ -103,7 +103,7 @@ function initLightBoxes ()
 						'<li>Ils préfèrent les repas interminables du dimanche</li>'+
 					'</ul>'+
 					'<p>Alors positive, tu es quelqu’un de bien !</p>',
-			title: 'Tu es arrivée au jardin des plantes',
+			title: '<img src="img/titre_jardin.png" style="width:300px; height:auto;"/>',
 			footer: '<button type="button" class="btn btn-default btn-sm nextStep">Prochaine étape</button>',
 		},
 	});
@@ -123,7 +123,7 @@ function initLightBoxes ()
 					'</ul>'+
 					'<p>Tu es à la moitié de la course, n’abandonne pas maintenant !</p>'+
 					'<p>Et regarde ta montre, ta moyenne est de 10,7 km/h, tu es dans les temps, continue comme ça pour atteindre ton objectif !</p>',
-			title: 'Tu es arrivé à la chapelle du CHU',
+			title: '<img src="img/titre_chapelle.png" style="width:300px; height:auto;"/>',
 			footer: '<button type="button" class="btn btn-default btn-sm nextStep">Prochaine étape</button>',
 		},
 	});
@@ -135,7 +135,7 @@ function initLightBoxes ()
 					'<p>A la fin des années 1970, la montée Saint-Maurice s\'achevait sur une esplanade aménagée en jardin avec un grand bassin circulaire dans l\'axe de la cathédrale, inaugurée en 1986.</p>',
 			facts: '<p>Si tu réalises ta performance, tes muscles seront considérablement renforcés ! Sans compter ce que vont t’apporter ces 103 marches de la montée St-Maurice... Aussi, ce n’est pas moins de 500 à 600 calories dépensées au total à la fin ! Ton corps puise dans ses ressources, alors n’hésite surtout pas à bien t’hydrater.</p>'+
 					'<p>Et si ça peut t’aider, pense au bon repas qui t’attend...</p>',
-			title: 'Tu es arrivé à la montée Saint-Maurice',
+			title: '<img src="img/titre_montee.png" style="width:300px; height:auto;"/>',
 			footer: '<button type="button" class="btn btn-default btn-sm nextStep">Prochaine étape</button>',
 		},
 	});
@@ -149,7 +149,7 @@ function initLightBoxes ()
 					'<p>« Demandez-vous : « Puis-je en donner plus ? » La réponse est généralement : « Oui ».<br>- Paul Tergat , marathonien professionnel du Kenya</p>'+
 					'<p>1863 : Deerfoot, un Indien nord-américain, a battu le record du monde de l’heure en course à pied, à 90 ans, en mocassins, alors qu’il ne s\'entraînait pas !</p>'+
 					'<p>Tout est dans le mental, c’est la fin. Prends-toi pour une princesse et termine la course royalement ! </p>',
-			title: 'Tu es arrivé au château d\'Angers',
+			title: '<img src="img/titre_chateau.png" style="width:300px; height:auto;"/>',
 			footer: '<button type="button" class="btn btn-default btn-sm toFinalStep">Prochaine étape</button>',
 		},
 	});
